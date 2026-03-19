@@ -108,16 +108,6 @@ Source: [Resource Model](https://developers.tron.network/docs/resource-model)
 npm install
 ```
 
-If you are starting from an empty folder instead of this repo, the setup commands are:
-
-```bash
-npx tronbox init
-npm init -y
-npm install tronweb dotenv
-npm install -D tronbox
-
-```
-
 TronBox is the official smart contract development and deployment tool for TRON, and its configuration docs show Nile with `https://nile.trongrid.io` and `network_id: "3"`.  
 Sources: [TronBox docs](https://tronbox.io/docs/reference/configuration), [TRON TronBox overview](https://developers.tron.network/v4.4.2/docs/tronbox)
 
