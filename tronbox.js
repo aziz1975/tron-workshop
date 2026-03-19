@@ -3,10 +3,10 @@ require('dotenv').config();
 module.exports = {
   networks: {
     nile: {
-      privateKey: process.env.PRIVATE_KEY_NILE,
+      privateKey: process.env.NILE_PRIVATE_KEY_A,
       consume_user_resource_percent: 50,
       fee_limit: 1e9,
-      fullHost: process.env.FULL_NODE_NILE,
+      fullHost: process.env.NILE_FULL_HOST,
       network_id: '*',
     },
   },

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "compile": "tronbox compile",
-    "deploy:nile": "tronbox migrate --network nile --reset",
+    "deploy:nile": "tronbox migrate --network nile",
     "demo:contract": "node scripts/contract-demo.js",
     "send:trx": "node scripts/send-trx.js",
     "send:usdt": "node scripts/send-usdt.js"
