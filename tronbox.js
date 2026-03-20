@@ -15,19 +15,12 @@ module.exports = {
       version: "0.8.25",
       settings: {
         optimizer: {
-          enabled: true, // Optional optimization settings
+          enabled: true,
           runs: 200,
         },
+        evmVersion: "shanghai",
       },
     },
-  },
-  // solc compiler optimize
-  solc: {
-    optimizer: {
-      enabled: true, // default: false, true: enable solc optimize
-      runs: 200
-    },
-    evmVersion: 'shanghai'
   }
 
 };
