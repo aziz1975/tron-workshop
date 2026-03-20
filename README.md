@@ -74,7 +74,6 @@ Use the official Nile faucet page:
 Or use the official community bot commands:
 
 - `!nile <your_address>` for Nile TRX
-- `!nile_usdt <your_address>` for Nile USDT
 
 Official docs also recommend verifying results in the Nile explorer:
 
