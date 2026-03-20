@@ -82,15 +82,6 @@ Official docs also recommend verifying results in the Nile explorer:
 
 Source: [Getting testnet tokens on TRON](https://developers.tron.network/docs/getting-testnet-tokens-on-tron)
 
-### Recommended workshop setup
-
-Before the live workshop:
-
-- fund **Address A** with Nile TRX and Nile USDT
-- fund **Address B** with some Nile TRX too
-
-This makes the demo smoother because:
-
 - **TRX transfer** uses Bandwidth
 - **Contract deployment** uses Bandwidth + Energy
 - **TRC-20 transfer** also uses Bandwidth + Energy
