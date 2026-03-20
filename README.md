@@ -270,7 +270,7 @@ For every transaction:
 ## Workshop demo order
 
 1. Get Address A and Address B on Nile
-2. Address A has Nile TRX and Nile USDT
+2. Make sure Address A has Nile TRX and Nile USDT
 3. run `npm run compile`
 4. run `npm run deploy:nile`
 5. update `.env` with deployed addresses
