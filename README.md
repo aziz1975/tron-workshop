@@ -20,16 +20,14 @@ This is designed as a **starting point** for hackathon teams. They can clone it,
 
 ---
 
-## What students will learn
+## What participants will learn
 
 - how to use **Nile** for testing
 - how to fund a test wallet with **TRX** and **USDT**
 - the difference between **TRX transfers** and **TRC-20 transfers**
 - why **Energy** and **Bandwidth** matter
 - how to deploy a contract and verify the transaction in the explorer
-- how to use one project as the starting point for a dApp
 
-TRON’s official docs say Nile is the supported testnet path for development, and they list the Nile endpoint and test token process.  
 Sources: [Connect to the TRON network](https://developers.tron.network/docs/connect-to-the-tron-network), [Getting testnet tokens on TRON](https://developers.tron.network/docs/getting-testnet-tokens-on-tron)
 
 ---
@@ -38,7 +36,7 @@ Sources: [Connect to the TRON network](https://developers.tron.network/docs/conn
 
 Install:
 
-- **Node.js 22+ LTS**
+- **Node.js 22+**
 - **npm**
 - a TRON wallet such as **TronLink**
 
@@ -94,8 +92,8 @@ Before the live workshop:
 This makes the demo smoother because:
 
 - **TRX transfer** uses Bandwidth
-- **contract deployment** uses smart contract execution resources
-- **TRC-20 transfer** also uses smart contract execution resources
+- **Contract deployment** uses Bandwidth + Energy
+- **TRC-20 transfer** also uses Bandwidth + Energy
 
 If resources are insufficient, TRX can be burned to cover the cost.  
 Source: [Resource Model](https://developers.tron.network/docs/resource-model)
@@ -108,8 +106,7 @@ Source: [Resource Model](https://developers.tron.network/docs/resource-model)
 npm install
 ```
 
-TronBox is the official smart contract development and deployment tool for TRON, and its configuration docs show Nile with `https://nile.trongrid.io` and `network_id: "3"`.  
-Sources: [TronBox docs](https://tronbox.io/docs/reference/configuration), [TRON TronBox overview](https://developers.tron.network/v4.4.2/docs/tronbox)
+TronBox is the official smart contract development and deployment tool for TRON.
 
 ---
 
@@ -140,9 +137,6 @@ SIMPLE_STORAGE_ADDRESS=<After deploying the contract put it here>
 
 - `USDT_CONTRACT` is for the **official Nile USDT contract** if you want to use faucet USDT.
 - `SIMPLE_STORAGE_ADDRESS` is filled after deployment.
-
-TRON’s current network docs list Nile with `https://nile.trongrid.io`.  
-Source: [Connect to the TRON network](https://developers.tron.network/docs/connect-to-the-tron-network)
 
 ---
 
@@ -177,10 +171,6 @@ Copy the deployed contract addresses into `.env`:
 If you want to use **official Nile USDT**, set:
 
 - `USDT_CONTRACT=<official Nile USDT contract address>`
-
-
-TronBox’s config reference shows the standard Nile deployment setup with `fullHost: 'https://nile.trongrid.io'` and `network_id: '3'`.  
-Source: [TronBox configuration](https://tronbox.io/docs/reference/configuration)
 
 ---
 
@@ -251,9 +241,6 @@ What this does:
 - prints the tx id
 - prints the Nile explorer link
 
-TronWeb’s current API docs still document `tronWeb.trx.sendTransaction(toAddress, amount)` for native TRX transfers.  
-Source: [TronWeb sendTransaction](https://tronweb.network/docu/docs/API%20List/trx/sendTransaction/)
-
 ---
 
 ## Step 9 — Send a simple USDT / TRC-20 transfer
@@ -270,13 +257,6 @@ What this does:
 - sends `1` token from **Address A** to **Address B**
 - prints the tx id
 - prints the Nile explorer link
-
-### Why this matters
-
-A TRC-20 transfer is a **smart contract call**, so it uses **Energy**.  
-A native TRX transfer is a normal transfer and primarily uses **Bandwidth**.
-
-Source: [Resource Model](https://developers.tron.network/docs/resource-model)
 
 ---
 
@@ -295,14 +275,9 @@ For every transaction:
    - token or TRX amount
    - contract interaction details
 
-The official testnet-token guide explicitly points developers to the Nile explorer for transaction verification.  
-Source: [Getting testnet tokens on TRON](https://developers.tron.network/docs/getting-testnet-tokens-on-tron)
-
 ---
 
 ## Workshop demo order
-
-Use this live sequence:
 
 1. show Address A and Address B on Nile
 2. show that Address A has Nile TRX and Nile USDT
@@ -316,50 +291,18 @@ Use this live sequence:
 10. run `npm run send:usdt`
 11. verify the token tx in Nile explorer
 
-That gives students one complete end-to-end example of:
-
-- deploy contract
-- call contract
-- send native TRX
-- send a token
-- verify everything on-chain
-
 ---
-
-
-### Recommended approach
-
-- **Preferred path:** use official **Nile USDT** from the faucet / bot
-
-This way, students still learn the same TRC-20 interaction flow even if the faucet is delayed.
 
 ---
 
 ## Resource model in simple language
 
-Use this explanation with students:
 
 - **Bandwidth** is used for ordinary transactions like TRX transfers
 - **Energy** is used for smart contract execution, such as deploying contracts and calling TRC-20 token contracts
 - if your account does not have enough Bandwidth or Energy, TRX can be burned to pay for the missing resources
 
 Source: [Resource Model](https://developers.tron.network/docs/resource-model)
-
----
-
-## Important security note
-
-This starter repo uses private keys in `.env` because it is meant for a **controlled workshop demo** and **local scripts**.
-
-Do **not** put private keys in frontend code or public repos.
-
-For real dApps, use a wallet-based flow such as:
-
-- TronLink
-- WalletConnect-TRON
-
-TRON’s deployment docs and dApp docs recommend wallet-connected flows for production-style applications.  
-Source: [Deploying](https://developers.tron.network/docs/deploying)
 
 ---
 
@@ -401,35 +344,6 @@ Most common causes:
 
 ---
 
-## Suggested extensions for hackathon teams
-
-Once students get this starter working, they can extend it into:
-
-### Payments
-
-- invoice creation
-- merchant checkout
-- payroll flows
-- recurring or scheduled payouts
-- B2B payment dashboard
-
-### Infrastructure
-
-- transaction preflight checker
-- developer CLI
-- better error reporting
-- framework plugin
-- SDK wrapper
-
-### AI
-
-- agentic commerce flow
-- x402-style payment gate
-- trust and discovery layer
-- safe signing / OPSEC tooling
-
----
-
 ## Quick command summary
 
 ```bash
@@ -448,12 +362,3 @@ npm run send:usdt
 
 ---
 
-## Official references
-
-- [Connect to the TRON network](https://developers.tron.network/docs/connect-to-the-tron-network)
-- [Getting testnet tokens on TRON](https://developers.tron.network/docs/getting-testnet-tokens-on-tron)
-- [Resource Model](https://developers.tron.network/docs/resource-model)
-- [Deploying](https://developers.tron.network/docs/deploying)
-- [TronBox configuration](https://tronbox.io/docs/reference/configuration)
-- [TronWeb sendTransaction](https://tronweb.network/docu/docs/API%20List/trx/sendTransaction/)
-- [TronWeb intro](https://developers.tron.network/v4.0/docs/tron-web-intro)
