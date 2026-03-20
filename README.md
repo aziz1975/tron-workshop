@@ -118,7 +118,7 @@ Sources: [TronBox docs](https://tronbox.io/docs/reference/configuration), [TRON 
 Copy the example file:
 
 ```bash
-cp .env.example .env
+cp .env.sample .env
 ```
 
 Then fill in:
@@ -206,6 +206,34 @@ This teaches the two most important TronWeb contract patterns:
 
 TronWeb is TRON’s JavaScript SDK for building dApps and interacting with full-node APIs.  
 Source: [TronWeb intro](https://developers.tron.network/v4.0/docs/tron-web-intro)
+
+---
+
+## Run the demo dApp frontend
+
+The repo includes a very small Next.js dApp in `frontend/`.
+
+It:
+
+- reads `SIMPLE_STORAGE_ADDRESS` from the root `.env`
+- uses **TronLink** in the browser
+- calls `setValue()` after wallet approval
+- calls `getValue()` to show the latest stored value
+
+Install and run it:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Then open `http://localhost:3000`.
+
+Notes:
+
+- there is no separate `frontend/.env`
+- if you change `SIMPLE_STORAGE_ADDRESS` in the root `.env`, restart the Next.js dev server
 
 ---
 

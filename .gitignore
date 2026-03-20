@@ -1,6 +1,7 @@
 
 src/js/metacoin-config.js
 node_modules
+.next
 build
 .env
 .venv/

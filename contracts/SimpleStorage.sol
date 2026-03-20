@@ -16,6 +16,6 @@ contract SimpleStorage {
     }
 
     function getValue() external view returns (uint256) {
-        return value;
+        return value; // comment
     }
 }
