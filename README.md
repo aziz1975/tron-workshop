@@ -125,7 +125,7 @@ SIMPLE_STORAGE_ADDRESS=<After deploying the contract put it here>
 
 ### Notes
 
-- `USDT_CONTRACT` is for the **official Nile USDT contract** if you want to use faucet USDT.
+- `USDT_CONTRACT` is for the **official Nile USDT contract**.
 - `SIMPLE_STORAGE_ADDRESS` is filled after deployment.
 
 ---
