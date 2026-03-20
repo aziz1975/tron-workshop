@@ -18,7 +18,7 @@ async function main() {
   console.log("Value before:", beforeValue.toString());
 
   const txid = await contract.setValue(99).send({
-    feeLimit: 100_000_000,
+    feeLimit: 100_000_000, // 100 TRX
   });
   console.log("setValue txid:", txid);
 
