@@ -39,6 +39,7 @@ Install:
 - **Node.js 22+**
 - **npm**
 - a TRON wallet such as **TronLink**
+- **TronBox** global install
 
 Use **two fresh Nile test wallets only**.
 
