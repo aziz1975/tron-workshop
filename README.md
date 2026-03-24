@@ -116,8 +116,8 @@ NILE_FULL_HOST=https://nile.trongrid.io
 
 NILE_PRIVATE_KEY_A=<Your Private Key>
 
-ADDRESS_A=<Your Address A>
-ADDRESS_B=<Your Address B>
+ADDRESS_A=<Your "From" address. Optional, because we retrived it from the private key>
+ADDRESS_B=<Your "To" Address>
 
 USDT_CONTRACT=TXYZopYRdj2D9XRtbG411XZZ3kM5VkAeBf
 SIMPLE_STORAGE_ADDRESS=<After deploying the contract put it here>
